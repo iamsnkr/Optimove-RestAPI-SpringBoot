@@ -23,7 +23,7 @@ public class KafkaImpl implements KafkaService{
     @Override
     public List<Optimove> getOptimoveData(int start, int size, String brand) {
         RestTemplate restTemplate = new RestTemplate();
-        String optimoveURL= "http://localhost:8080/optimovelistwithbrand?page="+start+"&size="+size+"&brand="+brand;
+        String optimoveURL= "http://localhost:8080/api/optimove/optimovelistwithbrand?page="+start+"&size="+size+"&brand="+brand;
         Optimove[] optimoveArray = restTemplate.getForObject(optimoveURL, Optimove[].class);
         return Arrays.asList(optimoveArray);
     }
@@ -31,7 +31,7 @@ public class KafkaImpl implements KafkaService{
     @Override
     public List<UseCaseAndTopics> getUseCaseAndTopics() {
         RestTemplate restTemplate = new RestTemplate();
-        String usecaseAndTopicsURL= "http://localhost:8080/usecase/topics/data";
+        String usecaseAndTopicsURL= "http://localhost:8080/api/usecase/topics/data";
         UseCaseAndTopics[] useCaseAndTopicsArray = restTemplate.getForObject(usecaseAndTopicsURL, UseCaseAndTopics[].class);
         return Arrays.asList(useCaseAndTopicsArray);
     }

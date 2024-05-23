@@ -30,12 +30,14 @@ Depending on your Spring Boot application configuration, you might need to adjus
 
 **Get The Optimove Data from MYSQL**
 ```bash
-http://localhost:8080/api/kafka/kafkadata
+http://localhost:8080/api/optimove/save
+http://localhost:8080/api/optimove/optimovelist?page={value}&size={value}
+http://localhost:8080/api/optimove/optimovelistwithbrand?page={value}&size={value}&brand={name}
 ```
 
 **Get The UseCaseAndTopics Data from MONGODB**
 ```bash
-http://localhost:8080/api/kafka/kafkadata
+http://localhost:8080/api/usecase/topics/data
 ```
 
 **Get The Kafka Data**

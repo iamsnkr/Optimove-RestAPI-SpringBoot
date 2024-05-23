@@ -1,13 +1,10 @@
 package com.ivy.cip.derestapi.controller;
 
-import com.ivy.cip.derestapi.entity.KafkaRecords;
-import com.ivy.cip.derestapi.entity.MongoDBCollection;
+
 import com.ivy.cip.derestapi.entity.Optimove;
-import com.ivy.cip.derestapi.service.MongoDBService;
-import com.ivy.cip.derestapi.service.OptimoveService;
+import com.ivy.cip.derestapi.service.OptimoveImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,10 +14,10 @@ import java.util.List;
 public class OptimoveController {
 
     @Autowired
-    OptimoveService optimoveService;
+    OptimoveImpl optimoveImpl;
     @GetMapping("/save")
     List<Optimove> getOpptimoveDataList(){
-      return optimoveService.addCustomerAttributes();
+      return optimoveImpl.addCustomerAttributes();
     }
 
     @GetMapping("/optimovelist")
@@ -28,7 +25,7 @@ public class OptimoveController {
             @RequestParam(name = "page") int page,
             @RequestParam(name = "size") int size){
        // ObjectMapper
-        return optimoveService.getPageCustomerAttributes(page, size);
+        return optimoveImpl.getPageCustomerAttributes(page, size);
     }
 
 
@@ -38,11 +35,11 @@ public class OptimoveController {
             @RequestParam(name = "size") int size,
             @RequestParam(name = "brand") String brand){
         // ObjectMapper
-        return optimoveService.getPageCustomerAttributesByBrand(page, size, brand);
+        return optimoveImpl.getPageCustomerAttributesByBrand(page, size, brand);
     }
 
 
-    @Autowired
+  /*  @Autowired
     MongoDBService mongoDBService;
     @GetMapping("/mongodbsave")
     List<MongoDBCollection> getMongoDbDataList(){
@@ -68,5 +65,5 @@ public class OptimoveController {
 
         return kafkaRecords;
     }
-
+*/
 }

@@ -1,3 +1,4 @@
+/*
 package com.ivy.cip.derestapi.repository;
 
 import com.ivy.cip.derestapi.entity.MongoDBCollection;
@@ -8,3 +9,4 @@ import org.springframework.stereotype.Repository;
 public interface MongoDBRepository extends JpaRepository<MongoDBCollection, Integer> {
 
 }
+*/

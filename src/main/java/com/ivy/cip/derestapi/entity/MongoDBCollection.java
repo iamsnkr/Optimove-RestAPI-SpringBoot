@@ -1,3 +1,4 @@
+/*
 package com.ivy.cip.derestapi.entity;
 
 
@@ -36,3 +37,4 @@ public class MongoDBCollection {
         this.customerAttrs = customerAttrs;
     }
 }
+*/

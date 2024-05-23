@@ -26,3 +26,31 @@ Run the following command:
 docker run -d --name mongodb -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root -p 27017:27017 mongo
 ```
 Depending on your Spring Boot application configuration, you might need to adjust the connection details (host, port, username, password) to connect to the databases from your application.
+
+
+**Get The Optimove Data from MYSQL**
+```bash
+http://localhost:8080/api/kafka/kafkadata
+```
+
+**Get The UseCaseAndTopics Data from MONGODB**
+```bash
+http://localhost:8080/api/kafka/kafkadata
+```
+
+**Get The Kafka Data**
+```bash
+http://localhost:8080/api/kafka/kafkadata
+```
+
+
+**Data Retrieval:**
+
+**Get The Optimove Data from MYSQL and Get The UseCaseAndTopics Data from MONGODB:** 
+- Optimove data is likely retrieved from a MySQL database.
+- UseCaseAndTopics data is retrieved from a MongoDB database.
+
+**Data Processing:**
+Get The Kafka Data: it is triggering the storage of the combined data.
+Here's a possible scenario:
+After retrieving and potentially combining Optimove and UseCaseAndTopics data and this API call will store it in a MySQL database for further processing or storage.

@@ -39,7 +39,7 @@ http://localhost:8080/api/optimove/optimovelistwithbrand?page={value}&size={valu
 ```bash
 http://localhost:8080/api/usecase/topics/data
 ```
-
+git diff 
 **Get The Kafka Data**
 ```bash
 http://localhost:8080/api/kafka/kafkadata
